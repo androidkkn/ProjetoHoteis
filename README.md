@@ -29,26 +29,29 @@ O sistema de gerenciamento de reservas de hotel terá as seguintes funcionalidad
 
 #### RF-010 Os usuários devem ser capazes de fazer reservas de quartos de hotel com antecedencia.
 
-**Descrição**: O sistema deve permitir que os usuários realizem reservas de quartos com antecedência mínima de 24 horas e máxima de 6 meses, Clientes VIP conseugem fazer reservas com antecedência de 1 ano."
+**Descrição**: O sistema deve permitir que os usuários façam reservas de quartos de hotel com antecedência mínima de 2 horas e máxima de 6 meses. Para clientes VIP, a antecedência máxima é de 1 ano. Se um usuário tentar fazer uma reserva com menos de 2 horas de antecedência, ele pagará uma taxa adicional de 15% do valor total da reserva. O sistema deve validar a disponibilidade do quarto para as datas selecionadas e enviar um e-mail de confirmação para o usuário após a reserva ser concluída. Os usuários também devem ser capazes de visualizar suas reservas
 **Prioridade**: Alta
-**Versão**: 1.1
+**Versão**: 1.2
 **Data**: 2026-01
 **Rastreabilidade**: Confirmação via e-mail da reserva, número de confirmação gerado pelo sistema.
 
 **Critérios de Aceitação**:
+- [ ] Se o usuário tentar fazer uma reserva com menos de 2 horas de antecedencia, ele pagara uma taxa de 15% do valor total da reserva.
 - [ ] O sistema deve validar a disponibilidade do quarto para as datas selecionadas.
 - [ ] O sistema deve enviar um e-mail de confirmação para o usuário após a reserva ser concluída.
 - [ ] O sistema deve permitir que os usuários visualizem suas reservas futuras
 - [ ] O sistema deve verificar se a reserva atende ao requisito de antecedência mínima e máxima.
 - [ ] O sistema deve permitir que os clientes VIP façam reservas com antecedência de até 1 ano.
+- [ ] O sistema deve calcular corretamente a taxa adicional para reservas feitas com menos de 2 horas de antecedência.
+- [ ] O sistema deve garantir que as reservas sejam processadas corretamente e que os usuários recebam as confirmações por e-mail.
 
 **Dependências**:
 - [ ] O sistema deve estar integrado com o sistema de autenticação para identificar os usuários.
-- [ ] O sistema deve estar integrado com o banco de dados de disponibilidade de quartos.
 - [ ] O sistema deve estar integrado com o serviço de envio de e-mails para confirmação de reservas.
 - [ ] Validação de datas (Não permitir datas passadas) e disponibilidade de quartos.
 - [ ] Integração com o sistema de pagamento para processar os pagamentos das reservas.
 - [ ] O sistema deve estar integrado com o sistema de gerenciamento de clientes para identificar os clientes VIP.
+- [ ] O sistema deve estar integrado com o sistema de gerenciamento de reservas para garantir que as reservas sejam processadas corretamente e que a disponibilidade dos quartos seja atualizada em tempo real.
 
 ## 4. Controle de Versão @
 
@@ -58,6 +61,7 @@ O sistema de gerenciamento de reservas de hotel terá as seguintes funcionalidad
 |--------|------------|--------------------------|----------------|
 | 1.0    | 2026-01 | Documento inicial criado  | Equipe de Análise     |
 | 1.1    | 2026-02 | Adicionado requisito para clientes VIP | Equipe de Desenvolvimento     |
+| 1.2    | 2026-03 | Adicionado critérios de aceitação e taxa de reserva de ultima hora | Equipe de Desenvolvimento     |
 
 ## 5. Aprovação @
 
@@ -67,3 +71,4 @@ O sistema de gerenciamento de reservas de hotel terá as seguintes funcionalidad
 |-----------|-----------|-------------------|----------------|
 | Documento inicial criado | 2026-01 | Stakeholder | Equipe de Análise     |
 | Adicionado requisito para clientes VIP | 2026-02 | Equipe de Vendas | Equipe de Desenvolvimento     |
+| Adicionado critérios de aceitação e taxa de reserva de ultima hora | 2026-03 | Gerente de Projeto | Equipe de Desenvolvimento     |
