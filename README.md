@@ -29,10 +29,10 @@ O sistema de gerenciamento de reservas de hotel terá as seguintes funcionalidad
 
 #### RF-010 Os usuários devem ser capazes de fazer reservas de quartos de hotel com antecedencia.
 
-**Descrição**: O sistema deve permitir que os usuários realizem reservas de quartos com antecedência mínima de 24 horas e máxima de 6 meses."
+**Descrição**: O sistema deve permitir que os usuários realizem reservas de quartos com antecedência mínima de 24 horas e máxima de 6 meses, Clientes VIP conseugem fazer reservas com antecedência de 1 ano."
 **Prioridade**: Alta
-**Versão**: 1.0
-**Data**: 2026-04-10
+**Versão**: 1.1
+**Data**: 2026-01
 **Rastreabilidade**: Confirmação via e-mail da reserva, número de confirmação gerado pelo sistema.
 
 **Critérios de Aceitação**:
@@ -40,6 +40,7 @@ O sistema de gerenciamento de reservas de hotel terá as seguintes funcionalidad
 - [ ] O sistema deve enviar um e-mail de confirmação para o usuário após a reserva ser concluída.
 - [ ] O sistema deve permitir que os usuários visualizem suas reservas futuras
 - [ ] O sistema deve verificar se a reserva atende ao requisito de antecedência mínima e máxima.
+- [ ] O sistema deve permitir que os clientes VIP façam reservas com antecedência de até 1 ano.
 
 **Dependências**:
 - [ ] O sistema deve estar integrado com o sistema de autenticação para identificar os usuários.
@@ -47,6 +48,7 @@ O sistema de gerenciamento de reservas de hotel terá as seguintes funcionalidad
 - [ ] O sistema deve estar integrado com o serviço de envio de e-mails para confirmação de reservas.
 - [ ] Validação de datas (Não permitir datas passadas) e disponibilidade de quartos.
 - [ ] Integração com o sistema de pagamento para processar os pagamentos das reservas.
+- [ ] O sistema deve estar integrado com o sistema de gerenciamento de clientes para identificar os clientes VIP.
 
 ## 4. Controle de Versão @
 
@@ -55,6 +57,7 @@ O sistema de gerenciamento de reservas de hotel terá as seguintes funcionalidad
 | Versão | Data       | Descrição da Modificação | Autor          |
 |--------|------------|--------------------------|----------------|
 | 1.0    | 2026-01 | Documento inicial criado  | Equipe de Análise     |
+| 1.1    | 2026-02 | Adicionado requisito para clientes VIP | Equipe de Desenvolvimento     |
 
 ## 5. Aprovação @
 
@@ -63,3 +66,4 @@ O sistema de gerenciamento de reservas de hotel terá as seguintes funcionalidad
 | Alteração | Data de Aprovação |  Aprovador | Autor          |
 |-----------|-----------|-------------------|----------------|
 | Documento inicial criado | 2026-01 | Stakeholder | Equipe de Análise     |
+| Adicionado requisito para clientes VIP | 2026-02 | Equipe de Vendas | Equipe de Desenvolvimento     |
